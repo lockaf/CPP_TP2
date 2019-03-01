@@ -1,5 +1,11 @@
+#ifndef date
+#define date
 
-class Date{
-	
-	
+struct date {
+    int day,int month,int year;
+
+
+
+    date();
+    date(
 }
