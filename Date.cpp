@@ -18,9 +18,9 @@ const int& Date::month() const {return month_value;}
 const int& Date::year() const {return year_value;}
 
 //Setteurs
-int& Date::day() {return day_value;}
-int& Date::month() {return month_value;}
-int& Date::year() {return year_value;}
+void Date::day(int new_day) {day_value = new_day;}
+void Date::month(int new_month) {month_value = new_month;}
+void Date::year(int new_year) {year_value = new_year}
 
 static bool is_date(int day, int month, int year){
 	bool ret=false;
