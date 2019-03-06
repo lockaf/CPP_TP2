@@ -21,7 +21,7 @@ const int& Date::year() const {return year_value;}
 int& Date::day() {return day_value;}
 int& Date::month() {return month_value;}
 int& Date::year() {return year_value;}
-
+//SALUUUUUUUUUUUUUUUUUUUUUUUUUUUT
 static bool is_date(int day, int month, int year){
 	bool ret=false;
 	    if(day < 32 && day>0){
