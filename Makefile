@@ -6,12 +6,15 @@ LDFLAGS=-pthread ${QT_DEPENDENCIES}
 CXX=g++
 
 
-executable: Date.o main.o
+executable: Date.o main.o person.o
 	${CXX} $^ -o executable ${LDFLAGS}
 
-Date.o: Date.cpp Date.hpp 
+
+Date.o: Date.cpp  Date.hpp
 
 main.o: main.cpp Date.hpp
+
+person.o: person.cpp person.hpp Date.hpp
 
 clean: 
 	rm -f format/*.o *.o executable *~ 
