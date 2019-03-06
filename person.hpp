@@ -1,9 +1,11 @@
 #ifndef PERSON_HPP
 #define PERSON_HPP
 
+#include <fstream>
+#include <iostream>
+#include <string>
 
-class Person
-{
+class Person{
 public:
     Person();
 };

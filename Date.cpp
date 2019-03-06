@@ -1,14 +1,14 @@
-#include "PROJ-1.hpp"
 #include "Date.hpp"
 #include <fstream>
 #include <iostream>
 #include <string>
 using namespace std;
 
-//Constructeurs
+/* Constructeurs */
+//Si aucun paramètre n'est entré, on met 0/0/0
 Date::Date()
         :day_value(0),month_value(0),year_value(0) {}
-
+//Si des paramètres sont entrés
 Date::Date(int day_param, int month_param, int year_param) //Faut-il mettre dautres noms?
         :day_value(day_param), month_value(month_param), year_value(year_param) {}
 
@@ -39,8 +39,8 @@ static bool is_date(int day, int month, int year){
 	    return ret;
 }
 
-static bool from_string(const std::string& name){
-    bool valid;
+static Date from_string(const std::string& name){
+    Date birth;
 
     int slash_1 = name.find('/',0);
     int slash_2 = name.find('/',slash_1+1);
@@ -53,22 +53,21 @@ static bool from_string(const std::string& name){
     int month = stoi(month_str);
     int year = stoi(year_str);
 
-    valid = is_date(day, month, year);
+    bool valid = is_date(day, month, year);
 
-    if (slash_1==-1 or slash_2==-1){
-         valid = false;
+    if (slash_1!=-1 and slash_2!=-1 and valid){
+        birth = Date(day,month,year);
+    }
+    else{
+        birth = Date();
     }
 
-    return valid;
+    return birth;
 }
 
 
-static std::string to_string(const Date& date){
-    return this.day() + "/" + this.month() + "/" + this.year();
-
+static std::string to_string(const Date& d){
+    return std::to_string(d.day()) + "/" + std::to_string(d.month()) + "/" + std::to_string(d.year());
 }
    
-int main() {
-    Date me = Date(12,06,1998);
-    to_string(me);
-}
+

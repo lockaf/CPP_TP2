@@ -1,5 +1,6 @@
-#ifndef date
-#define date
+#ifndef DATE_H
+#define DATE_H
+#pragma once
 #include <fstream>
 #include <iostream>
 #include <string>
