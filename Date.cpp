@@ -18,10 +18,17 @@ const int& Date::month() const {return month_value;}
 const int& Date::year() const {return year_value;}
 
 //Setteurs
+<<<<<<< HEAD
 void Date::day(int new_day) {day_value = new_day;}
 void Date::month(int new_month) {month_value = new_month;}
 void Date::year(int new_year) {year_value = new_year}
 
+=======
+int& Date::day() {return day_value;}
+int& Date::month() {return month_value;}
+int& Date::year() {return year_value;}
+//SALUUUUUUUUUUUUUUUUUUUUUUUUUUUT
+>>>>>>> eeee3e188ad2e05c41bb86c0d1bc2f64c8073b43
 static bool is_date(int day, int month, int year){
 	bool ret=false;
 	    if(day < 32 && day>0){
