@@ -1,3 +1,4 @@
+
 #include "Date.hpp"
 #include <fstream>
 #include <iostream>
@@ -10,8 +11,8 @@ int main(int argc, char *argv[]) {
         std::cerr << "Error 1 : Running out of arguments" << std::endl;
         return 1;
         }
-    std::string date_str = argv[3];
-    Date birth = Date::from_string(argv[3]);
+
+    Date birth = Date::from_string(argv[2]);
 
     std::cout << birth.to_string(birth) << std::endl ;
     return 0;
