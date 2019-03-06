@@ -12,7 +12,7 @@ executable: Date.o main.o person.o
 
 Date.o: Date.cpp  Date.hpp
 
-main.o: main.cpp Date.hpp
+main.o: main.cpp Date.hpp person.hpp
 
 person.o: person.cpp person.hpp Date.hpp
 

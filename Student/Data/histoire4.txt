@@ -1,0 +1,2 @@
+Ceci est l'histoire de $(name) qui est né(e) le $(dob)$(name).
+$(name) est quelqu'un d'important.
